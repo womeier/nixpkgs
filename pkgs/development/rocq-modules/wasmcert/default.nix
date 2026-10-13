@@ -14,7 +14,7 @@
 mkCoqDerivation {
   pname = "wasm";
   repo = "WasmCert-Coq";
-  owner = "WasmCert";
+  owner = "womeier";
 
   inherit version;
   defaultVersion =
@@ -30,14 +30,14 @@ mkCoqDerivation {
     lib.switch
       [ coq.coq-version mathcomp-boot.version ]
       [
-        (case (lib.versions.range "9.0" "9.2") (lib.versions.range "2.4" "2.6") "2.2.1")
+        (case (lib.versions.range "9.0" "9.2") (lib.versions.range "2.4" "2.6") "2.3.0")
         (case (lib.versions.range "8.20" "9.1") (lib.versions.range "2.4" "2.5") "2.2.0")
       ]
       null;
 
   release."2.1.0".hash = "sha256-k094mxDLLeelYP+ABm+dm6Y5YrachrbhNeZhfwLHNRo=";
   release."2.2.0".hash = "sha256-GsfNpXgCG6XGqDE+bekzwZsWIHyjDTzWRuNnjCtS/88=";
-  release."2.2.1".hash = "sha256-RtJXfaX/04+BuMWjnq6PKOyNm5Ed5v/ZP71C9Q8iSVk=";
+  release."2.3.0".hash = "sha256-RtJXfaX/04+BuMWjnq6PKOyNm5Ed5v/ZP71C9Q8iSVk=";
 
   mlPlugin = true;
   useDune = true;
