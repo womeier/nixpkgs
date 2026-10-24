@@ -75,6 +75,8 @@ let
       atbr = callPackage ../development/rocq-modules/atbr { };
       autosubst = callPackage ../development/rocq-modules/autosubst { };
       autosubst-ocaml = callPackage ../development/rocq-modules/autosubst-ocaml { };
+      base64 = callPackage ../development/rocq-modules/base64 { };
+      base64-bytestring = self.base64.bytestring;
       bbv = callPackage ../development/rocq-modules/bbv { };
       bignums = callPackage ../development/rocq-modules/bignums { };
       CakeMLExtraction = callPackage ../development/rocq-modules/CakeMLExtraction { };
